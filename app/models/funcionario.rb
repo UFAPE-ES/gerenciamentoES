@@ -1,7 +1,8 @@
 class Funcionario < ApplicationRecord
   validates :nome, presence: true, length: {in: 5..40}
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :senha, presence:true, length: {in:8..25}
+  validates :senha, presence:true, confirmation: true, length: {in:8..25}
+  validates :senha_confirmation, presence: true
   validate :senha_uppercase, :senha_lower_case, :senha_special_char
 
   def senha_uppercase
