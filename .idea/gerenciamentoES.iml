@@ -51,6 +51,20 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.9, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cpf_cnpj (v0.5.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v7.1.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-core (v10.1.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-create-meta (v6.0.2, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-cucumber-expressions (v14.0.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-gherkin (v22.0.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-html-formatter (v17.0.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-messages (v17.1.1, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v2.4.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-tag-expressions (v4.1.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-wire (v6.2.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v2.0.1, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner-active_record (v2.0.1, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner-core (v2.0.1, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.4.4, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.4, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.5.2, ruby-3.0.1-p64) [gem]" level="application" />
@@ -61,9 +75,12 @@
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v1.0.0, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.3.1, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2021.0901, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.14.4, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.4.2, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.1.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.8, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.12.5, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.2.3, ruby-3.0.1-p64) [gem]" level="application" />
@@ -91,6 +108,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.0.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.2.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.4.2, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sys-uname (v1.2.2, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.1.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.10, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.2.1, ruby-3.0.1-p64) [gem]" level="application" />
@@ -100,6 +118,7 @@
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.1.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webdrivers (v5.0.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webpacker (v5.4.3, ruby-3.0.1-p64) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webrick (v1.7.0, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.5, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, ruby-3.0.1-p64) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, ruby-3.0.1-p64) [gem]" level="application" />
@@ -118,6 +137,7 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+        <option value="cucumber:install" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -148,6 +168,7 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+        <option value="cucumber:install" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
