@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Remetente:</strong>
+  <%= @encomenda.remetente %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @encomenda.data %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= Funcionario.find(@encomenda.funcionario_id).nome %>
+</p>
+
+<p>
+  <strong>Morador:</strong>
+  <%= Morador.find(@encomenda.morador_id).nome %>
+</p>
+
+<%= link_to 'Edit', edit_encomenda_path(@encomenda) %> |
+<%= link_to 'Back', encomendas_path %>
