@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_13_120227) do
+ActiveRecord::Schema.define(version: 2021_11_14_014231) do
 
   create_table "funcionarios", force: :cascade do |t|
     t.string "nome"
     t.string "email"
     t.string "senha"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "moradors", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "bloco"
+    t.string "casanum"
+    t.string "contato"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
