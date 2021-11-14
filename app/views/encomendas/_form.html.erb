@@ -1,0 +1,37 @@
+<%= form_with(model: encomenda) do |form| %>
+  <% if encomenda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(encomenda.errors.count, "error") %> prohibited this encomenda from being saved:</h2>
+
+      <ul>
+        <% encomenda.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :remetente %>
+    <%= form.text_field :remetente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funcionario_id %>
+    <%= form.collection_select(:funcionario_id, Funcionario.all, :id, :nome,{:selected => @encomenda.funcionario_id})%>
+  </div>
+
+  <div class="field">
+    <%= form.label :morador_id %>
+    <%= form.collection_select(:morador_id, Morador.all, :id, :nome,{:selected => @encomenda.morador_id})%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

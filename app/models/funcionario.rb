@@ -1,4 +1,6 @@
 class Funcionario < ApplicationRecord
+  has_many :encomendas
+
   validates :nome, presence: true, length: {in: 5..40}
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :senha, presence:true, confirmation: true, length: {in:8..25}

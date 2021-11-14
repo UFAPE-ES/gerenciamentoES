@@ -1,4 +1,6 @@
 class Morador < ApplicationRecord
+  has_many :encomendas
+  
   validates :nome, presence: true, length: {in: 5..50}
   validates :casanum, presence:true, numericality:true
   validates :bloco, presence: true
