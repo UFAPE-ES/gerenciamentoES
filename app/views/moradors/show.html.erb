@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @morador.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @morador.cpf %>
+</p>
+
+<p>
+  <strong>Bloco:</strong>
+  <%= @morador.bloco %>
+</p>
+
+<p>
+  <strong>Casanum:</strong>
+  <%= @morador.casanum %>
+</p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @morador.contato %>
+</p>
+
+<%= link_to 'Edit', edit_morador_path(@morador) %> |
+<%= link_to 'Back', moradors_path %>
