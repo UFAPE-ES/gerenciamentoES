@@ -8,12 +8,10 @@ install:
   - yarn
 
 script: 
-  - rake db:migrate RAILS_ENV=test 
-  - rails webpacker:compile
-
-  - rails test test/models/funcionario_test.rb
-  - rails test test/models/morador_test.rb
-  - rails test test/models/encomenda_test.rb
+  - bundle exec rake db:create:all
+  - bundle exec rake db:migrate RAILS_ENV=test
+  - bundle exec rails webpacker:compile
+  - ruby -S bundle exec cucumber --profile default
 
 services:
   - postgresql
