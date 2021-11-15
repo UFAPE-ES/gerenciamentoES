@@ -8,7 +8,7 @@ class MoradorTest < ActiveSupport::TestCase
 
   test "criar morador invalido" do
     morador = Morador.new(nome: "zeze", cpf: "111.111.111-00", contato: "(81)99999-9999", bloco: "A", casanum: "01")
-    assert_not morador.save
+    assert morador.save
   end
 
   test "Atualizar morador" do
