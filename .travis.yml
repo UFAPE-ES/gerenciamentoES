@@ -6,10 +6,14 @@ install:
   - node -v
   - npm i -g yarn
   - yarn
+
 script: 
-- bundle exec rake db:create:all 
-- bundle exec rake db:migrate RAILS_ENV=test 
-- bundle exec rails webpacker:compile
+  - rake db:migrate RAILS_ENV=test 
+  - rails webpacker:compile
+
+  - rails test test/models/funcionario_test.rb
+  - rails test test/models/morador_test.rb
+  - rails test test/models/encomenda_test.rb
 
 services:
-- postgresql
+  - postgresql
