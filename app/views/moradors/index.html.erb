@@ -22,9 +22,9 @@
         <td><%= morador.bloco %></td>
         <td><%= morador.casanum %></td>
         <td><%= morador.contato %></td>
-        <td><%= link_to 'Show', morador %></td>
-        <td><%= link_to 'Edit', edit_morador_path(morador) %></td>
-        <td><%= link_to 'Destroy', morador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', morador %></td>
+        <td><%= link_to 'Editar', edit_morador_path(morador), id:"e-#{morador.cpf}"%></td>
+        <td><%= link_to 'Deletar', morador, id:"d-#{morador.cpf}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
