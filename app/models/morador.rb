@@ -1,3 +1,4 @@
+require "cpf_cnpj"
 class Morador < ApplicationRecord
   has_many :encomendas
   
@@ -6,4 +7,11 @@ class Morador < ApplicationRecord
   validates :bloco, presence: true
   validates :contato, presence: true, numericality:true, length:{minimum: 9}
   validates :cpf, presence: true, uniqueness: true
+  validate :cpf_valido
+
+  def cpf_valido
+    if cpf.present? && !CPF.valid?(cpf)
+      errors.add(:cpf, "formato ou numero errado")
+    end
+  end
 end
