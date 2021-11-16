@@ -6,7 +6,7 @@ Feature: Encomenda
 Scenario: criar encomenda com sucesso
   Given eu estou na pagina de nova encomenda
   And tem um funcionario registrado com o nome 'Pedro', email 'pedro@gmail.com', senha '@Ped123456', confirmo a senha com '@Ped123456' 
-  And tem registrado um morador com o nome 'Antonio', cpf '''307.431.250-53', bloco 'A', casanum '7', contato '981000000'
+  And tem registrado um morador com o nome 'Antonio', cpf '307.431.250-53', bloco 'A', casanum '7', contato '981000000'
   When eu crio a encomenda com o remetente 'Americanas', data '11-11-2021', seleciono o morador 'Antonio', seleciono o funcionario 'Pedro'
   And eu clico no botao 'Criar encomenda'
   Then eu vejo que a encomenda com remetente 'Americanas', data '11-11-2021', morador 'Antonio', funcionario 'Pedro' esta na lista de encomendas
