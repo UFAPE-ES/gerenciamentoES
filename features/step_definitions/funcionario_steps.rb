@@ -27,8 +27,8 @@ When ('eu clico em deletar o funcionario com nome {string}') do |nome|
   click_link "d-#{nome}"
 end
 
-When('eu clico no botao {string}') do |button_name|
-  click_button button_name
+When('eu clico em concluir') do
+  click_button 'Criar Funcionario'
 end
 
 Then ('eu vejo o funcionario com nome {string}, email {string} listado na lista de funcionarios') do |nome,email|
@@ -40,7 +40,7 @@ Then ('eu vejo uma mensagem de que a confimacao de senha nao e compativel com a 
   assert_selector('div#error_explanation', text: 'Confirmação de senha não é igual a Senha')
 end
 
-Then ('eu vejo uma mensagem que o nome é curto') do
+Then ('eu vejo uma mensagem que o nome e curto') do
   assert_selector('div#error_explanation', text: 'Nome é muito curto (mínimo: 5 caracteres)')
 end
 
