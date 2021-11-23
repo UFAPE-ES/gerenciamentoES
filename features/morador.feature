@@ -1,4 +1,7 @@
 Feature: Morador
+  As a Usuario do sistema de gerenciamento de encomendas
+  I want to Criar, editar, visualizar e remover morador
+  So that Eu possa gerenciar os moradores do condominio
 
   Scenario: novo morador
     Given Estou na pagina de morador
@@ -25,7 +28,8 @@ Feature: Morador
     Then eu vejo uma mensagem de cpf invalido
 
   Scenario: novo morador cpf existente
-    Given Estou na pagina de morador
+    Given o morador com o cpf '307.431.250-53' existe
+    And estou na pagina de criar morador
     When eu preencho nome 'Sabrino', cpf '307.431.250-53', bloco 'C', casanum '3', contato '999475530'
     And clico em Criar Morador
     Then eu vejo uma mensagem de cpf ja esta em uso
