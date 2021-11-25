@@ -16,6 +16,11 @@ Given('eu estou na pagina de listagem de morador') do
   visit '/moradors'
 end
 
+Given('estou na pagina de criar morador') do
+  visit '/moradors/new'
+end
+
+
 When('eu preencho nome {string}, cpf {string}, bloco {string}, casanum {string}, contato {string}') do |nome, cpf, bloco, casanum, telefone|
   fill_in 'morador[nome]', :with => nome
   fill_in 'morador[cpf]', :with => cpf
