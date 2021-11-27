@@ -1,4 +1,19 @@
 <h1>Gerenciamento ES</h1>
+
+<!-- Caso já esteja logado só irá mostrar sair -->
+<% if user_signed_in? %>
+  <ul>
+    <li><%= current_user.nome %></li>
+    <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+  </ul>
+<% else %>
+  <ul>
+    <li><%= link_to "Entrar", new_user_session_path%></li>
+    <li><%= link_to "Cadastro novo usuário", new_user_registration_path %></li>
+  </ul>
+<% end %>
+
+
 <ul>
   <li><%= link_to "Funcionarios", funcionarios_path %></li>
   <li><%= link_to "Moradores", moradors_path %></li>
