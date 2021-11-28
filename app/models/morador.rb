@@ -1,4 +1,5 @@
 require "cpf_cnpj"
+
 class Morador < ApplicationRecord
   has_many :encomendas
   
