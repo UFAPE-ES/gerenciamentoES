@@ -7,6 +7,8 @@
     <tr>
       <th>Remetente</th>
       <th>Data</th>
+      <th>Funcionario</th>
+      <th>Morador</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +18,11 @@
       <tr>
         <td><%= encomenda.remetente %></td>
         <td><%= encomenda.data %></td>
-        <th colspan="4"></th>
-        <td><%= link_to 'detalhes', encomenda %></td>
-        <td><%= link_to 'editar', edit_encomenda_path(encomenda) %></td>
-        <td><%= link_to 'excluir', encomenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= encomenda.funcionario_id %></td>
+        <td><%= encomenda.morador_id %></td>
+        <td><%= link_to 'Show', encomenda %></td>
+        <td><%= link_to 'Edit', edit_encomenda_path(encomenda) %></td>
+        <td><%= link_to 'Destroy', encomenda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +30,4 @@
 
 <br>
 
-<%= link_to 'Nova Encomenda', new_encomenda_path, class: "text-decoration-none" %>
+<%= link_to 'New Encomenda', new_encomenda_path %>

@@ -20,5 +20,5 @@
   <%= Morador.find(@encomenda.morador_id).nome %>
 </p>
 
-<%= link_to 'Adicionar produto na encomenda', new_produto_path(:encomenda_id => @encomenda.id) %> |
-<%= link_to 'voltar', encomendas_path %>
+<%= link_to 'Edit', edit_encomenda_path(@encomenda) %> |
+<%= link_to 'Back', encomendas_path %>
