@@ -64,7 +64,7 @@ class EncomendasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_encomenda
-      @encomenda = Encomenda.find(params[:id])
+      @encomenda = Encomenda.find_by(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

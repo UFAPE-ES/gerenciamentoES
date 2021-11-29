@@ -24,7 +24,7 @@ class ProdutosController < ApplicationController
 
   # POST /produtos or /produtos.json
   def create
-    @encomenda = Encomenda.find(params[:encomenda_id])
+    @encomenda = Encomenda.find_by(params[:id])
     @produto = @encomenda.produtos.create(produto_params)
 
     respond_to do |format|
