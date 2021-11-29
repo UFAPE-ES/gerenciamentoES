@@ -13,7 +13,7 @@
     <li><%= link_to "Moradores", moradors_path%></li>
     <li><%= link_to "Encomendas", encomendas_path %></li>
     <% if current_user.tipo == "Administrador" %>
-      <li><%= link_to "Funcionarios", funcionarios_path %></li>
+      <li><%= link_to "Usuários", users_index_path %></li>
     <% end %>
   </ul>
 <% else %>

@@ -1,5 +1,5 @@
 class Encomenda < ApplicationRecord
-  has_one :funcionario, dependent: :destroy
+  has_one :user, dependent: :destroy
   has_one :morador, dependent: :destroy
 
   validates :remetente, presence: true, length: {in: 5..50}
