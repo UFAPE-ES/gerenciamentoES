@@ -33,10 +33,6 @@ When('clico em Criar Morador') do
   click_button 'Criar Morador'
 end
 
-When('eu clico em deletar o morador com cpf {string}') do |cpf|
-  click_link "d-#{cpf}"
-end
-
 Then('eu vejo que o morador de nome {string} e cpf {string} foi salvo') do |nome, cpf|
   page.has_content?(nome)
   page.has_content?(cpf)
@@ -46,7 +42,7 @@ Then('eu vejo uma mensagem de cpf deve ser preenchido') do
   page.has_content?("Cpf não pode ficar em branco")
 end
 
-Then('eu vejo uma mensagem de contato é muito curto') do
+Then('eu vejo uma mensagem de contato e muito curto') do
   page.has_content?("Contato é muito curto (mínimo: 9 caracteres)")
 end
 

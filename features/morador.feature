@@ -22,7 +22,7 @@ Feature: Morador
     And Estou na pagina de morador
     When eu preencho nome 'Joaquim', cpf '919.095.040-25', bloco 'B', casanum '1', contato '789'
     And clico em Criar Morador
-    Then eu vejo uma mensagem de contato é muito curto
+    Then eu vejo uma mensagem de contato e muito curto
 
   Scenario: novo morador invalido
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
@@ -38,10 +38,3 @@ Feature: Morador
     When eu preencho nome 'Sabrino', cpf '307.431.250-53', bloco 'C', casanum '3', contato '999475530'
     And clico em Criar Morador
     Then eu vejo uma mensagem de cpf ja esta em uso
-
-  Scenario: deletar morador
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
-    And  o morador com o cpf '307.431.250-53' existe
-    And    eu estou na pagina de listagem de morador
-    When   eu clico em deletar o morador com cpf '307.431.250-53'
-    Then   eu vejo que o morador '307.431.250-53' foi deletado com sucesso
