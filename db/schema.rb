@@ -33,14 +33,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_125058) do
     t.index ["morador_id"], name: "index_enderecos_on_morador_id"
   end
 
-  create_table "funcionarios", force: :cascade do |t|
-    t.string "nome"
-    t.string "email"
-    t.string "senha"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "moradors", force: :cascade do |t|
     t.string "nome"
     t.string "cpf"
