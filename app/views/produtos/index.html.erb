@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Produtos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @produtos.each do |produto| %>
+      <tr>
+        <td><%= produto.nome %></td>
+        <td colspan="4"></td>
+        <td><%= link_to 'detalhes', produto %></td>
+        <td><%= link_to 'editar', edit_produto_path(produto) %></td>
+        <td><%= link_to 'excluir', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Produto', new_produto_path %>
