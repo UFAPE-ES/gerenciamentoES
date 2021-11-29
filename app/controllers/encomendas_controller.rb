@@ -1,6 +1,6 @@
 class EncomendasController < ApplicationController
   before_action :set_encomenda, only: %i[ show edit update destroy ]
-
+  before_action :logged_in_user
   # GET /encomendas or /encomendas.json
   def index
     @encomendas = Encomenda.all
