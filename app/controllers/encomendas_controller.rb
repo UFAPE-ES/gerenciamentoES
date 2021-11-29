@@ -1,6 +1,4 @@
 class EncomendasController < ApplicationController
-  before_action :set_encomenda, only: %i[ show edit update destroy ]
-
   # GET /encomendas or /encomendas.json
   def index
     @encomendas = Encomenda.all
@@ -8,6 +6,7 @@ class EncomendasController < ApplicationController
 
   # GET /encomendas/1 or /encomendas/1.json
   def show
+    @encomenda = Encomenda.find(params[:id])
     @produtos = @encomenda.produtos
   end
 
@@ -18,6 +17,7 @@ class EncomendasController < ApplicationController
 
   # GET /encomendas/1/edit
   def edit
+    @encomenda = Encomenda.find(params[:id])
   end
 
   # POST /encomendas or /encomendas.json
@@ -41,6 +41,8 @@ class EncomendasController < ApplicationController
 
   # PATCH/PUT /encomendas/1 or /encomendas/1.json
   def update
+    @encomenda = Encomenda.find(params[:id])
+    
     respond_to do |format|
       if @encomenda.update(encomenda_params)
         format.html { redirect_to @encomenda, notice: "Encomenda was successfully updated." }
@@ -54,6 +56,7 @@ class EncomendasController < ApplicationController
 
   # DELETE /encomendas/1 or /encomendas/1.json
   def destroy
+    @encomenda = Encomenda.find(params[:id])
     @encomenda.destroy
     respond_to do |format|
       format.html { redirect_to encomendas_url, notice: "Encomenda was successfully destroyed." }
@@ -62,11 +65,6 @@ class EncomendasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_encomenda
-      @encomenda = Encomenda.find_by(params[:id])
-    end
-
     # Only allow a list of trusted parameters through.
     def encomenda_params
       params.require(:encomenda).permit(:remetente, :data, :funcionario_id, :morador_id)
