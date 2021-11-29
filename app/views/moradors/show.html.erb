@@ -25,5 +25,20 @@
   <%= @morador.contato %>
 </p>
 
+<p>
+  <strong>Rua:</strong>
+  <%= @morador.endereco.rua %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @morador.endereco.complemento %>
+</p>
+
+<p>
+  <strong>CEP:</strong>
+  <%= @morador.endereco.cep %>
+</p>
+
 <%= link_to 'Edit', edit_morador_path(@morador) %> |
 <%= link_to 'Back', moradors_path %>

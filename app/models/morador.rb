@@ -1,6 +1,8 @@
 require "cpf_cnpj"
 class Morador < ApplicationRecord
   has_many :encomendas
+  has_one :endereco, dependent: :destroy
+  accepts_nested_attributes_for :endereco, allow_destroy: true
   
   validates :nome, presence: true, length: {in: 5..50}
   validates :casanum, presence:true, numericality:true

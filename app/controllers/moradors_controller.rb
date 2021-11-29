@@ -13,6 +13,7 @@ class MoradorsController < ApplicationController
   # GET /moradors/new
   def new
     @morador = Morador.new
+    @morador.build_endereco
   end
 
   # GET /moradors/1/edit
@@ -22,6 +23,7 @@ class MoradorsController < ApplicationController
   # POST /moradors or /moradors.json
   def create
     @morador = Morador.new(morador_params)
+    @morador.endereco = Endereco.new(morador_params[:endereco_attributes])
 
     respond_to do |format|
       if @morador.save
@@ -64,6 +66,7 @@ class MoradorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def morador_params
-      params.require(:morador).permit(:nome, :cpf, :bloco, :casanum, :contato)
+      params.require(:morador).permit(:nome, :cpf, :bloco, :casanum, :contato,
+                                      endereco_attributes: [:rua, :complemento, :cep])
     end
 end

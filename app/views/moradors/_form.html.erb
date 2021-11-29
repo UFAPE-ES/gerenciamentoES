@@ -36,6 +36,25 @@
     <%= form.text_field :contato %>
   </div>
 
+  <%= form.fields_for :endereco do |endereco_form| %>
+
+    <div class="field">
+      <%= endereco_form.label :rua %>
+      <%= endereco_form.text_field :rua %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :complemento %>
+      <%= endereco_form.text_field :complemento %>
+    </div>
+
+    <div class="field">
+      <%= endereco_form.label :cep %>
+      <%= endereco_form.text_field :cep %>
+    </div>
+
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
