@@ -5,5 +5,5 @@
   <%= @produto.nome %>
 </p>
 
-<%= link_to 'editar', edit_encomenda_produto_path(:id => @encomenda.id) %> |
-<%= link_to 'voltar', encomenda_path %>
+<%= link_to 'editar', edit_produto_path(@produto, :encomenda_id => @encomenda.id) %> |
+<%= link_to 'voltar', encomenda_path(@encomenda) %>

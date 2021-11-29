@@ -8,6 +8,7 @@ class EncomendasController < ApplicationController
 
   # GET /encomendas/1 or /encomendas/1.json
   def show
+    @produtos = @encomenda.produtos
   end
 
   # GET /encomendas/new
