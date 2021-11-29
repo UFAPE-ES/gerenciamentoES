@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :encomendas
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

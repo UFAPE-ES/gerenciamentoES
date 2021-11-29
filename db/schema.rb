@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2021_11_29_133741) do
   create_table "encomendas", force: :cascade do |t|
     t.string "remetente"
     t.date "data"
-    t.integer "funcionario_id", null: false
+    t.integer "user_id", null: false
     t.integer "morador_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["funcionario_id"], name: "index_encomendas_on_funcionario_id"
     t.index ["morador_id"], name: "index_encomendas_on_morador_id"
+    t.index ["user_id"], name: "index_encomendas_on_user_id"
   end
 
   create_table "enderecos", force: :cascade do |t|
@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_133741) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["morador_id"], name: "index_enderecos_on_morador_id"
-  end
-
-  create_table "funcionarios", force: :cascade do |t|
-    t.string "nome"
-    t.string "email"
-    t.string "senha"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "moradors", force: :cascade do |t|
@@ -73,8 +65,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_133741) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "encomendas", "funcionarios"
   add_foreign_key "encomendas", "moradors"
+  add_foreign_key "encomendas", "users"
   add_foreign_key "enderecos", "moradors"
   add_foreign_key "produtos", "encomendas"
 end
