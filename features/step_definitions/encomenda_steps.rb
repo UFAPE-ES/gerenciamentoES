@@ -6,16 +6,6 @@ Given('Estou na pagina de listar encomendas') do
   visit 'encomendas'
 end
 
-# Given('o morador com o cpf {string} existe') do |cpf|
-#   visit 'moradors/new'
-#   fill_in 'morador[nome]', :with => "Teste"
-#   fill_in 'morador[cpf]', :with => cpf
-#   fill_in 'morador[bloco]', :with => "F"
-#   fill_in 'morador[casanum]', :with => "157"
-#   fill_in 'morador[contato]', :with => "981818181"
-#   click_button 'Criar Morador'
-# end
-
 When('Eu preencho o remetente com {string} e a data da entrega com {string}') do |remetente, data_entrega|
   fill_in 'encomenda[remetente]', :with => remetente
   fill_in 'encomenda[data_entrega]', :with => data_entrega
