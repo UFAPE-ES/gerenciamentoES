@@ -6,18 +6,18 @@ Given('Estou na pagina de listar encomendas') do
   visit 'encomendas'
 end
 
-When('Eu preencho o remetente com {string} e a data da entrega com {string}') do |remetente, data_entrega|
+When('Eu preencho o remetente com {string} e a data da entrega com {string}') do |remetente, data|
   fill_in 'encomenda[remetente]', :with => remetente
-  fill_in 'encomenda[data_entrega]', :with => data_entrega
+  fill_in 'encomenda[data]', :with => data
 end
 
 When('Eu clico em Criar Encomenda') do
   click_button 'Criar Encomenda'
 end
 
-Then('Eu vejo que o remetente de nome {string} e data da entrega {string} foi salvo') do |remetente, data_entrega|
+Then('Eu vejo que o remetente de nome {string} e data da entrega {string} foi salvo') do |remetente, data|
   page.has_content?(remetente)
-  page.has_content?(data_entrega)
+  page.has_content?(data)
 end
 
 Then('Eu vejo uma mensagem de remetente deve ser preenchido') do
