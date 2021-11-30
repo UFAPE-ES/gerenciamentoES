@@ -11,7 +11,7 @@ class ProdutoTest < ActiveSupport::TestCase
     endereco = Endereco.new(rua:"rua central", complemento:"centro", cep:"55380-000", morador_id: morador.id)
     assert endereco.save
 
-    encomenda = Encomenda.new(remetente:"amazon", data: "29-11-2021", user_id:user.id, morador_id:morador.id)
+    encomenda = Encomenda.new(remetente:"amazon", data_entrega: "29-11-2021", user_id:user.id, morador_id:morador.id)
     assert encomenda.save
 
     produto = Produto.new(nome:"monitor", encomenda_id:encomenda.id)
@@ -28,7 +28,7 @@ class ProdutoTest < ActiveSupport::TestCase
     endereco = Endereco.new(rua:"rua central", complemento:"centro", cep:"55380-000", morador_id: morador.id)
     assert endereco.save
 
-    encomenda = Encomenda.new(remetente:"amazon", data: "29-11-2021", user_id:user.id, morador_id:morador.id)
+    encomenda = Encomenda.new(remetente:"amazon", data_entrega: "29-11-2021", user_id:user.id, morador_id:morador.id)
     assert encomenda.save
 
     produto = Produto.new(nome:"", encomenda_id:encomenda.id)
@@ -45,7 +45,7 @@ class ProdutoTest < ActiveSupport::TestCase
     endereco = Endereco.new(rua:"rua central", complemento:"centro", cep:"55380-000", morador_id: morador.id)
     assert endereco.save
 
-    encomenda = Encomenda.new(remetente:"amazon", data: "29-11-2021", user_id:user.id, morador_id:morador.id)
+    encomenda = Encomenda.new(remetente:"amazon", data_entrega: "29-11-2021", user_id:user.id, morador_id:morador.id)
     assert encomenda.save
 
     produto = Produto.new(nome:"", encomenda_id:encomenda.id)
