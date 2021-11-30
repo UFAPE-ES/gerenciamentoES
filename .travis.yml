@@ -13,5 +13,11 @@ script:
   - bundle exec rails webpacker:compile
   - ruby -S bundle exec cucumber --profile default
 
+  - rails test test/models/user_test.rb
+  - rails test test/models/morador_test.rb
+  - rails test test/models/endereco_test.rb
+  - rails test test/models/encomenda_test.rb
+  - rails test test/models/produto_test.rb
+
 services:
   - postgresql
