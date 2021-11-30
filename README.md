@@ -26,3 +26,7 @@ O usuário deve ser capaz de cadastrar, remover, editar e visualizar os moradore
 * Página do sistema na plataforma.
 ## :construction: Status do Projeto
 Em andamento
+
+## Login
+Email: admin@admin.com
+Senha: admin1
