@@ -12,7 +12,12 @@ script:
   - bundle exec rake db:migrate RAILS_ENV=test
   - bundle exec rails webpacker:compile
   - ruby -S bundle exec cucumber --profile default
-  - Itest test/models - ruby -Itest
+
+  - rails test test/models/user_test.rb
+  - rails test test/models/morador_test.rb
+  - rails test test/models/endereco_test.rb
+  - rails test test/models/encomenda_test.rb
+  - rails test test/models/produto_test.rb
 
 services:
   - postgresql
