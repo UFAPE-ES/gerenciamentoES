@@ -5,6 +5,7 @@ class Encomenda < ApplicationRecord
   has_many :produtos, dependent: :destroy
 
   validates :remetente, presence: true, length: {in: 5..50}
+  validates :data, presence: true
   validate :data_entrega
 
   def data_entrega
