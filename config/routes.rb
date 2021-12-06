@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   #cotrollers:{
   # sessions: 'admins/sessions'
   #}
-  devise_for :users
-  get 'users/index'
-  get 'users/show'
-  get 'users/deletar'
-  delete "users/:id", to: "users#deletar"
+  devise_for :funcionarios
+  get 'funcionarios/index'
+  get 'funcionarios/show'
+  get 'funcionarios/deletar'
+  delete "funcionarios/:id", to: "funcionarios#deletar"
   resources :encomendas
   resources :produtos
   resources :moradors
