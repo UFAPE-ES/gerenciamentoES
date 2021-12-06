@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :morador_id %>
-    <%= form.collection_select(:morador_id, Morador.all, :id, :nome,{:selected => @encomenda.morador_id})%>
+    <%= form.collection_select(:morador_id, Morador.all, :id, :nome,{:selected => @encomenda.morador_id}, :required => true)%>
   </div>
 
   <div>
