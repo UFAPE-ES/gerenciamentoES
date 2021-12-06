@@ -4,7 +4,10 @@ Feature: Produto
   So that criar um produto na encomenda
 
   Scenario: criar produto valido
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
+    Given o funcionario com email 'douglas@gmail.com' e password '123456' existe
+    And estou na pagina de login de funcionario
+    And eu preencho os campos email 'douglas@gmail.com' e password '123456'
+    And clico em log in
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
     When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
@@ -15,7 +18,10 @@ Feature: Produto
     Then vejo a mensagem produto criado com sucesso
 
   Scenario: criar produto com nome invalido
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
+    Given o funcionario com email 'douglas@gmail.com' e password '123456' existe
+    And estou na pagina de login de funcionario
+    And eu preencho os campos email 'douglas@gmail.com' e password '123456'
+    And clico em log in
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
     When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
@@ -26,7 +32,10 @@ Feature: Produto
     Then vejo a mensagem nome do produto e muito curto
 
   Scenario: criar produto com nome vazio
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
+    Given o funcionario com email 'douglas@gmail.com' e password '123456' existe
+    And estou na pagina de login de funcionario
+    And eu preencho os campos email 'douglas@gmail.com' e password '123456'
+    And clico em log in
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
     When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
@@ -37,7 +46,10 @@ Feature: Produto
     Then vejo a mensagem nome do produto nao pode ficar em branco
 
   Scenario: editar produto
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
+    Given o funcionario com email 'douglas@gmail.com' e password '123456' existe
+    And estou na pagina de login de funcionario
+    And eu preencho os campos email 'douglas@gmail.com' e password '123456'
+    And clico em log in
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
     When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
@@ -52,7 +64,10 @@ Feature: Produto
     Then vejo a mensagem produto foi atualizado com sucesso
 
   Scenario: editar produto com nome curto
-    Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
+    Given o funcionario com email 'douglas@gmail.com' e password '123456' existe
+    And estou na pagina de login de funcionario
+    And eu preencho os campos email 'douglas@gmail.com' e password '123456'
+    And clico em log in
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
     When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
