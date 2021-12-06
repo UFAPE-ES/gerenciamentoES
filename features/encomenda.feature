@@ -7,7 +7,7 @@ Feature: Encomenda
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
-    When eu crio uma encomenda com remetente 'Amazon', data '12-12-2021', seleciono o user 'funcionario' e morador de nome 'Sabrino'
+    When eu preencho remetente 'Amazon', data '12-12-2021', seleciono o morador de nome 'Sabrino'
     And clico em Criar Encomenda
     Then vejo uma mensagem encomenda realiza com sucesso
 
@@ -15,7 +15,7 @@ Feature: Encomenda
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
-    When eu crio uma encomenda com remetente '', data '12-12-2021', seleciono o user 'funcionario' e morador de nome 'Sabrino'
+    When eu preencho remetente '', data '12-12-2021', seleciono o morador de nome 'Sabrino'
     And clico em Criar Encomenda
     Then vejo uma mensagem remetente nao pode ficar em branco
 
@@ -23,7 +23,7 @@ Feature: Encomenda
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
-    When eu crio uma encomenda com remetente 'te', data '12-12-2021', seleciono o user 'funcionario' e morador de nome 'Sabrino'
+    When eu preencho remetente 'te', data '12-12-2021', seleciono o morador de nome 'Sabrino'
     And clico em Criar Encomenda
     Then vejo uma mensagem remetente muito curto
 
@@ -31,7 +31,7 @@ Feature: Encomenda
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
-    When eu crio uma encomenda com remetente 'teste02', data '12-12-2011', seleciono o user 'funcionario' e morador de nome 'Sabrino'
+    When eu preencho remetente 'teste02', data '12-12-2011', seleciono o morador de nome 'Sabrino'
     And clico em Criar Encomenda
     Then vejo uma mensagem data nao pode ser no passado
 
@@ -39,6 +39,6 @@ Feature: Encomenda
     Given o funcionario com email 'douglas@gmail.com' e senha '123456' existe
     And o morador com o nome 'Sabrino' que mora na rua 'Rua teste' existe
     And Estou na pagina de criar encomenda
-    When eu crio uma encomenda com remetente 'teste02', data '', seleciono o user 'funcionario' e morador de nome 'Sabrino'
+    When eu preencho remetente 'teste02', data '', seleciono o morador de nome 'Sabrino'
     And clico em Criar Encomenda
     Then vejo uma mensagem data nao pode ficar em branco

@@ -15,10 +15,9 @@ Given('Estou na pagina de criar encomenda') do
   visit '/encomendas/new'
 end
 
-When('eu crio uma encomenda com remetente {string}, data {string}, seleciono o user {string} e morador de nome {string}') do |remetente, tipo, data, nome|
+When('eu preencho remetente {string}, data {string}, seleciono o morador de nome {string}') do |remetente, data, nome|
   fill_in 'encomenda[remetente]', :with => remetente
   fill_in 'encomenda[data]', :with => data
-  find('#encomenda_user_id option:first-of-type').select_option
   select nome, from:'encomenda[morador_id]'
 end
 
