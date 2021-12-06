@@ -1,0 +1,24 @@
+<h1>Funcionários</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @funcionarios.each do |funcionario| %>
+    <tr>
+      <td><%= funcionario.nome %></td>
+      <td><%= link_to 'Exibir', funcionarios_show_path(:id => funcionario.id)  %></td>
+      <td><%= link_to "Deletar", funcionarios_deletar_path(:id => funcionario.id), data: { confirm: "Tem certeza?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Voltar', root_path %>

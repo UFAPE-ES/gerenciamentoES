@@ -22,10 +22,10 @@ class EncomendasController < ApplicationController
 
   # POST /encomendas or /encomendas.json
   def create
-    @user = User.find(encomenda_params[:user_id])
+    @funcionario = Funcionario.find(encomenda_params[:funcionario_id])
     @morador = Morador.find(encomenda_params[:morador_id])
     @encomenda = Encomenda.new(encomenda_params)
-    @user.encomendas << @encomenda
+    @funcionario.encomendas << @encomenda
     @morador.encomendas << @encomenda
     
     respond_to do |format|
@@ -67,6 +67,6 @@ class EncomendasController < ApplicationController
   private
     # Only allow a list of trusted parameters through.
     def encomenda_params
-      params.require(:encomenda).permit(:remetente, :data, :user_id, :morador_id)
+      params.require(:encomenda).permit(:remetente, :data, :funcionario_id, :morador_id)
     end
 end

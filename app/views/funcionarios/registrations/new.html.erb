@@ -1,10 +1,7 @@
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <!--Predefinindo o tipo do novo usuário -->
-  <%= f.hidden_field :tipo, value: "Funcionario" , :id => 'id_tipo'%>
+  <%= render "funcionarios/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :nome %>
@@ -34,4 +31,4 @@
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "funcionarios/shared/links" %>

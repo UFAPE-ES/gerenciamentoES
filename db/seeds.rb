@@ -8,7 +8,7 @@
 module Seeds
   def self.run
     admin = Admin.new(nome: 'Doulgas Gerente', email: 'admin@admin.com', password:'123456', password_confirmation:'123456')
-    funcionario = User.new(nome:'Vitor Func', email:'teste@gmail.com',tipo:'Funcionario', password:'123456', password_confirmation:'123456')
+    funcionario = Funcionario.new(nome:'Vitor Func', email:'teste@gmail.com', password:'123456', password_confirmation:'123456')
 
     admin.save
     funcionario.save
