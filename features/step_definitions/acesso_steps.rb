@@ -71,7 +71,7 @@ Then('vejo uma mensagem de saiu com sucesso') do
 end
 
 Then('vejo que o login adm foi efetuado com sucesso') do
-  page.has_content?('Bem vindo Administrador')
+  page.has_content?('Perfil Administrador')
 end
 
 
