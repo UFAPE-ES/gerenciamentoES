@@ -16,7 +16,7 @@ class EnderecoTest < ActiveSupport::TestCase
     endereco = Endereco.new(rua:"rua central", complemento:"centro", cep:"55380-000", morador_id: morador.id)
     assert endereco.save
 
-    assert endereco.update(rua:"avenida central")
+    assert morador.endereco.update(rua:"avenida central")
   end
 
   test "criar endereco com dado invalido" do
