@@ -1,5 +1,5 @@
 class Encomenda < ApplicationRecord
-  belongs_to :user
+  belongs_to :funcionario
   belongs_to :morador
 
   has_many :produtos, dependent: :destroy

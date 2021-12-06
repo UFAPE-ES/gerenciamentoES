@@ -28,11 +28,11 @@
   </div>
 
   <div>
-    <% if user_signed_in? %>
-      <%= form.hidden_field :user_id, value: current_user.id , :id => 'id_user'%>
+    <% if funcionario_signed_in? %>
+      <%= form.hidden_field :funcionario_id, value: current_funcionario.id , :id => 'id_funcionario'%>
     <% else %>
-      <label name="user_id">Funcionario</label>
-      <%= form.collection_select(:user_id, User.all, :id, :nome,{:selected => @encomenda.user_id})%>
+      <label name="funcionario_id">Funcionario</label>
+      <%= form.collection_select(:funcionario_id, Funcionario.all, :id, :nome,{:selected => @encomenda.funcionario_id}, :required => true)%>
       <br><br>
     <%end %>
   </div>
