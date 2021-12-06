@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 module Seeds
   def self.run
-    user = User.new(nome:'admin', email:'admin@admin.com',tipo:'Administrador', password:'admin1', password_confirmation:'admin1')
-    funcionario = User.new(nome:'funcionario', email:'teste@gmail.com',tipo:'Funcionario', password:'123456', password_confirmation:'123456')
+    admin = Admin.new(nome: 'Doulgas Gerente', email: 'admin@admin.com', password:'123456', password_confirmation:'123456')
+    funcionario = User.new(nome:'Vitor Func', email:'teste@gmail.com',tipo:'Funcionario', password:'123456', password_confirmation:'123456')
 
+    admin.save
     funcionario.save
-    user.save
   end
 end
 

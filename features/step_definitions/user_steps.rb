@@ -14,7 +14,7 @@ When('clico em sign up') do
 end
 
 Then('eu vejo Bem vindo Funcionario') do
-  expect(page).to have_content("Bem vindo Funcionario")
+  expect(page).to have_content("Perfil Funcionario")
 end
 
 Then('eu vejo uma mensagem Nome e muito curto') do

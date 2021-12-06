@@ -1,0 +1,30 @@
+<p id="notice"><%= params[:notice] %></p>
+
+<h1>Gerenciamento ES</h1>
+<!-- Caso já esteja logado só irá mostrar sair -->
+<% if user_signed_in? %>
+  <h2>Perfil Funcionario</h2>
+  <h3>Bem vindo <%= current_user.nome %></h3>
+  <ul>
+    <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "Moradores", moradors_path%></li>
+    <li><%= link_to "Encomendas", encomendas_path %></li>
+    <% if current_user.tipo == "Administrador" %>
+      <li><%= link_to "Usuários", users_index_path %></li>
+    <% end %>
+  </ul>
+<% elsif admin_signed_in?%>
+  <h2>Perfil Administrador</h2>
+  <h3>Bem vindo <%= current_admin.nome %></h3>
+  <ul>
+    <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
+    <li><%= link_to "Moradores", moradors_path%></li>
+    <li><%= link_to "Encomendas", encomendas_path %></li>
+    <li><%= link_to "Funcionários", users_index_path %></li>
+  </ul>
+<%else %>
+  <ul>
+    <li><%= link_to "Entrar como Funcionario", new_user_session_path%></li>
+    <li><%= link_to "Entrar como Administrador", new_admin_session_path %></li>
+  </ul>
+<% end %>

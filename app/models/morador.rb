@@ -1,6 +1,6 @@
 require "cpf_cnpj"
 class Morador < ApplicationRecord
-  has_many :encomendas
+  has_many :encomendas, dependent: :destroy
   has_one :endereco, dependent: :destroy
   accepts_nested_attributes_for :endereco, allow_destroy: true
   

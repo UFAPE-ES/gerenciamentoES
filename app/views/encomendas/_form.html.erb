@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-  <%= form.hidden_field :user_id, value: current_user.id , :id => 'id_user'%>
 
   <div class="field">
     <%= form.label :remetente %>
@@ -26,6 +25,16 @@
   <div class="field">
     <%= form.label :morador_id %>
     <%= form.collection_select(:morador_id, Morador.all, :id, :nome,{:selected => @encomenda.morador_id})%>
+  </div>
+
+  <div>
+    <% if user_signed_in? %>
+      <%= form.hidden_field :user_id, value: current_user.id , :id => 'id_user'%>
+    <% else %>
+      <label name="user_id">Funcionario</label>
+      <%= form.collection_select(:user_id, User.all, :id, :nome,{:selected => @encomenda.user_id})%>
+      <br><br>
+    <%end %>
   </div>
 
   <div class="actions">
