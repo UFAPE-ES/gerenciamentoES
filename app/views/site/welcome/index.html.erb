@@ -3,7 +3,7 @@
 <h1>Gerenciamento ES</h1>
 <!-- Caso já esteja logado só irá mostrar sair -->
 <% if user_signed_in? %>
-  <h2>Pefil Funcionario</h2>
+  <h2>Perfil Funcionario</h2>
   <h3>Bem vindo <%= current_user.nome %></h3>
   <ul>
     <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
@@ -14,7 +14,7 @@
     <% end %>
   </ul>
 <% elsif admin_signed_in?%>
-  <h2>Pefil Administrador</h2>
+  <h2>Perfil Administrador</h2>
   <h3>Bem vindo <%= current_admin.nome %></h3>
   <ul>
     <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
