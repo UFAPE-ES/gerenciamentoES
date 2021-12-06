@@ -1,6 +1,6 @@
 class MoradorsController < ApplicationController
   before_action :set_morador, only: %i[ show edit update destroy ]
-  before_action :logged_in_user
+  before_action :logged_in
   # GET /moradors or /moradors.json
   def index
     @moradors = Morador.all
