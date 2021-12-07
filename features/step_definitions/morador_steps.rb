@@ -8,7 +8,7 @@ Given('o morador com o cpf {string} existe') do |cpf|
   fill_in 'morador[cpf]', :with => cpf
   fill_in 'morador[bloco]', :with => "F"
   fill_in 'morador[casanum]', :with => "157"
-  fill_in 'morador[contato]', :with => "981818181"
+  fill_in 'morador[telefone]', :with => "981818181"
   click_button 'Criar Morador'
 end
 
@@ -21,12 +21,12 @@ Given('estou na pagina de criar morador') do
 end
 
 
-When('eu preencho nome {string}, cpf {string}, bloco {string}, casanum {string}, contato {string}') do |nome, cpf, bloco, casanum, telefone|
+When('eu preencho nome {string}, cpf {string}, bloco {string}, casanum {string}, telefone {string}') do |nome, cpf, bloco, casanum, telefone|
   fill_in 'morador[nome]', :with => nome
   fill_in 'morador[cpf]', :with => cpf
   fill_in 'morador[bloco]', :with => bloco
   fill_in 'morador[casanum]', :with => casanum
-  fill_in 'morador[contato]', :with => telefone
+  fill_in 'morador[telefone]', :with => telefone
 end
 
 When('clico em Criar Morador') do
@@ -42,8 +42,8 @@ Then('eu vejo uma mensagem de cpf deve ser preenchido') do
   page.has_content?("Cpf não pode ficar em branco")
 end
 
-Then('eu vejo uma mensagem de contato e muito curto') do
-  page.has_content?("Contato é muito curto (mínimo: 9 caracteres)")
+Then('eu vejo uma mensagem de telefone e muito curto') do
+  page.has_content?("Telefone é muito curto (mínimo: 9 caracteres)")
 end
 
 Then('eu vejo uma mensagem de cpf invalido') do
