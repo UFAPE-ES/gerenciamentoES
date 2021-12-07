@@ -9,7 +9,7 @@
       <th>Cpf</th>
       <th>Bloco</th>
       <th>Casanum</th>
-      <th>Contato</th>
+      <th>Telefone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
         <td><%= morador.cpf %></td>
         <td><%= morador.bloco %></td>
         <td><%= morador.casanum %></td>
-        <td><%= morador.contato %></td>
+        <td><%= morador.telefone %></td>
         <td><%= link_to 'Mostrar', morador %></td>
         <td><%= link_to 'Editar', edit_morador_path(morador), id:"e-#{morador.cpf}"%></td>
         <td><%= link_to 'Deletar', morador, id:"d-#{morador.cpf}", method: :delete, data: { confirm: 'Are you sure?' } %></td>

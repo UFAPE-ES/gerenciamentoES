@@ -4,7 +4,7 @@ Given('o morador com o nome {string} que mora na rua {string} existe') do |nome,
   fill_in 'morador[cpf]', :with => "807.212.310-63"
   fill_in 'morador[bloco]', :with => "F"
   fill_in 'morador[casanum]', :with => "157"
-  fill_in 'morador[contato]', :with => "981818181"
+  fill_in 'morador[telefone]', :with => "981818181"
   fill_in 'morador[endereco_attributes][rua]', :with => rua
   fill_in 'morador[endereco_attributes][complemento]', :with => "testandooo"
   fill_in 'morador[endereco_attributes][cep]', :with => "55435-000"
