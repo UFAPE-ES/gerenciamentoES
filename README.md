@@ -29,4 +29,4 @@ Em andamento
 
 ## Login
 Email: admin@admin.com
-Senha: admin1
+Senha: 123456
