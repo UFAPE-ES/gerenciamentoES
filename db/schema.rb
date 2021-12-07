@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_12_04_175752) do
     t.string "cpf"
     t.string "bloco"
     t.string "casanum"
-    t.string "contato"
+    t.string "telefone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

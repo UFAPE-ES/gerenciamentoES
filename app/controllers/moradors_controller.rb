@@ -66,7 +66,7 @@ class MoradorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def morador_params
-      params.require(:morador).permit(:nome, :cpf, :bloco, :casanum, :contato,
+      params.require(:morador).permit(:nome, :cpf, :bloco, :casanum, :telefone,
                                       endereco_attributes: [:rua, :complemento, :cep])
     end
 end

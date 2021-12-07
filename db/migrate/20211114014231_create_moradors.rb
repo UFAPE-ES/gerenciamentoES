@@ -5,7 +5,7 @@ class CreateMoradors < ActiveRecord::Migration[6.1]
       t.string :cpf
       t.string :bloco
       t.string :casanum
-      t.string :contato
+      t.string :telefone
 
       t.timestamps
     end
